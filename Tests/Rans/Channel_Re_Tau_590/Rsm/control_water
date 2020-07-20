@@ -3,6 +3,7 @@
 #--------------------
  PROBLEM_NAME   chan
  HEAT_TRANSFER  yes
+ TURBULENT_HEAT_FLUX_MODEL  GGDH
 
  PRESSURE_DROPS   0.0036  0.0 0.0
  MASS_FLOW_RATES  20.32    0.0 0.0
@@ -12,7 +13,7 @@
 #---------------
 
  TIME_STEP                  3.5
- NUMBER_OF_TIME_STEPS      3000
+ NUMBER_OF_TIME_STEPS      600
  RESULTS_SAVE_INTERVAL      600
  BACKUP_SAVE_INTERVAL       600
 
@@ -36,8 +37,8 @@
  DYNAMIC_VISCOSITY    1.0e-3
  HEAT_CAPACITY        4187.0
 
- TURBULENCE_MODEL         rsm_manceau_hanjalic
-# TURBULENCE_MODEL         rsm_hanjalic_jakirlic
+# TURBULENCE_MODEL         rsm_manceau_hanjalic
+ TURBULENCE_MODEL         rsm_hanjalic_jakirlic
 
  TURBULENCE_MODEL_VARIANT none
 # TURBULENCE_MODEL_VARIANT stabilized
@@ -76,8 +77,8 @@
 #--------------------
 
  INITIAL_CONDITION
-  VARIABLES u     v   w   t    uu     vv     ww     uv    uw     vw    eps     f22 
-  VALUES    0.001 0.0 0.0 20.0 0.0001 0.0001 0.0001 0.00  0.0001 0.0   0.0002  0.1
+  VARIABLES u     v   w   t    uu     vv     ww     uv    uw     vw     eps     f22 
+  VALUES    0.001 0.0 0.0 20.0 0.001 0.0001 0.0001 0.00  0.000001 0.0   0.0002  0.1
 
 #---------------------
 # Boundary conditions
