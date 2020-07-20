@@ -87,11 +87,11 @@
 
     do c = 1, grid % n_cells
       eps_l(c) = eps % n(c) + TINY ! limited eps % n
+      kin % n(c) = max(0.5*(uu % n(c) + vv % n(c) + ww % n(c)), TINY)
 
       t_1(c) = kin % n(c)/eps_l(c)
       l_1(c) = kin % n(c)**1.5/eps_l(c)
 
-      kin % n(c) = max(0.5*(uu % n(c) + vv % n(c) + ww % n(c)), TINY)
       turb % t_scale(c) = t_1(c)
       turb % l_scale(c) = l_1(c)
     end do
