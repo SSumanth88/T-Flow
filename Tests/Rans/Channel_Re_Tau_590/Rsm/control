@@ -38,8 +38,8 @@
  DYNAMIC_VISCOSITY    1.0e-4
  HEAT_CAPACITY        1.0
 
-# TURBULENCE_MODEL         rsm_manceau_hanjalic
- TURBULENCE_MODEL         rsm_hanjalic_jakirlic
+ TURBULENCE_MODEL         rsm_manceau_hanjalic
+# TURBULENCE_MODEL         rsm_hanjalic_jakirlic
 
  TURBULENCE_MODEL_VARIANT none
 # TURBULENCE_MODEL_VARIANT stabilized
@@ -78,8 +78,8 @@
 #--------------------
 
  INITIAL_CONDITION
-  VARIABLES u     v    w     t    uu     vv     ww     uv    uw     vw   eps    f22 
-  VALUES    0.1   0.0  0.0   20.0 0.005  0.005  0.005  0.00  0.001 0.0   0.002  0.1
+  VARIABLES u     t    uu     vv     ww     uv    uw      vw    eps    f22 
+  VALUES    0.1   20.0 0.005  0.005  0.005  0.00  0.00001 0.0   0.002  0.1
 
 #---------------------
 # Boundary conditions
